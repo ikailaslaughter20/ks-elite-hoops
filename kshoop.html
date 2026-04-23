@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KS Elite Hoops Training</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0d0d0d;
+color:white;
+}
+
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.85);
+padding:15px;
+display:flex;
+justify-content:center;
+gap:25px;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.9)),
+url('https://images.unsplash.com/photo-1546519638-68e109acd27d');
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:3.5rem;
+font-weight:800;
+}
+
+.hero p{
+margin-top:10px;
+font-size:1.3rem;
+}
+
+.btn{
+margin-top:20px;
+padding:14px 35px;
+background:#ff7a00;
+border:none;
+border-radius:30px;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff9500;
+transform:scale(1.05);
+}
+
+section{
+padding:100px 20px;
+max-width:1100px;
+margin:auto;
+opacity:0;
+transform:translateY(50px);
+transition:all 0.8s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+h2{
+text-align:center;
+color:#ff7a00;
+margin-bottom:25px;
+font-size:2rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#1a1a1a;
+padding:25px;
+border-radius:15px;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+.cta{
+background:#111;
+text-align:center;
+padding:70px 20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:black;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#details">Details</a>
+<a href="#gallery">Gallery</a>
+<a href="#register">Register</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+<h1>KS ELITE HOOPS TRAINING</h1>
+<p>Elite Fitness & Skills Camp</p>
+<p>Train harder. Get better. Stand out.</p>
+<button class="btn">Register Now</button>
+</div>
+
+<section id="about">
+<h2>About</h2>
+
+<p>
+Welcome to KS Elite Hoops Training Elite Fitness & Skills Camp — where performance meets purpose.
+</p>
+
+<p>
+My name is I'Kaila Slaughter, founder of KS Elite Hoops Training. As a Health & Fitness Management student and athlete, I created this event to combine basketball skill development with total body fitness training in one high-energy experience.
+</p>
+
+<p>
+This camp is designed to help athletes improve their game, build confidence, and train like serious competitors — all in a positive and motivating environment.
+</p>
+</section>
+
+<section id="details">
+<h2>Event Details</h2>
+
+<div class="grid">
+<div class="card">📅 May 6, 2026</div>
+<div class="card">⏰ 5:00 PM - 8:00 PM</div>
+<div class="card">📍 Warner Robins High School</div>
+<div class="card">💲 $20 Entry</div>
+</div>
+</section>
+
+<section id="gallery">
+<h2>Training Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1504450758481-7338eba7524a">
+<img src="https://images.unsplash.com/photo-1519861531473-9200262188bf">
+</div>
+
+</section>
+
+<section id="register">
+<h2>Register Now</h2>
+
+<p style="text-align:center;">
+Click below to secure your spot.
+</p>
+
+<div style="text-align:center;">
+<a href="#" class="btn">Register Here</a>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<p style="text-align:center;">📞 478-694-0000</p>
+<p style="text-align:center;">📧 KSelite@gmail.com</p>
+<p style="text-align:center;">Instagram & Facebook: KSElite Hoops</p>
+</section>
+
+<div class="cta">
+<h2>Don’t Miss Out</h2>
+<p>Spots are limited. Lock in now.</p>
+<button class="btn">Join Now</button>
+</div>
+
+<footer>
+<p>© 2026 KS Elite Hoops Training | I'Kaila Slaughter</p>
+</footer>
+
+<script>
+const sections=document.querySelectorAll("section");
+
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=sec.getBoundingClientRect().top;
+if(top<window.innerHeight-100){
+sec.classList.add("show");
+}
+});
+});
+</script>
+
+</body>
+</html>
